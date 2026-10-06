@@ -1,58 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Student Records Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A simple Student Records CRUD application built using Laravel. This project was created as part of the ITPC 115 laboratory activity.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The application allows users to:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- View all student records
+- Add a new student
+- Edit an existing student
+- Delete a student
+- Validate student information before saving
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Student Information
 
-## Learning Laravel
+Each student record contains:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Student Number
+- First Name
+- Last Name
+- Course
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Technologies Used
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- PHP
+- Laravel
+- MySQL
+- XAMPP
+- Blade Templates
+- HTML
+- Git
+- GitHub
+- Visual Studio Code
 
-## Agentic Development
+## CRUD Operations
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+This application demonstrates the four basic CRUD operations:
 
-```bash
-composer require laravel/boost --dev
+- **Create** - Add a new student record
+- **Read** - Display student records
+- **Update** - Edit an existing student record
+- **Delete** - Remove a student record
 
-php artisan boost:install
-```
+## MVC Architecture
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+The project follows Laravel's MVC architecture:
 
-## Contributing
+- **Model** - The `Student` model manages student data and interacts with the database.
+- **View** - Blade templates display the student list and forms to the user.
+- **Controller** - The `StudentController` handles requests and performs the CRUD operations.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Database
 
-## Code of Conduct
+The application uses a MySQL database named:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+`student_records`
 
-## Security Vulnerabilities
+The `students` table contains the student information used by the application.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## How to Run the Project
 
-## License
+1. Clone the repository.
+2. Run `composer install`.
+3. Copy `.env.example` to `.env`.
+4. Configure the database settings in `.env`.
+5. Run `php artisan key:generate`.
+6. Run `php artisan migrate`.
+7. Start the Laravel development server using `php artisan serve`.
+8. Open `http://127.0.0.1:8000` in a browser.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Reflection
+
+This activity helped me understand how Laravel uses the MVC architecture to organize an application. I learned how models interact with the database, how controllers handle requests and CRUD operations, and how Blade views display information to users. I also learned how to configure a MySQL database, use migrations, validate form input, and manage project versions using Git and GitHub.
